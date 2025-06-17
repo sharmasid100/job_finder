@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
-from utils import preprocess_input, predict_job
-from api_handler import return_links, parse_job_data
+from .utils import preprocess_input, predict_job
+from .api_handler import return_links, parse_job_data
 
 app = Flask(__name__)
 
