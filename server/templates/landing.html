@@ -250,33 +250,24 @@ section p {
   .navbar {
     flex-direction: column;
     align-items: center;
-    padding: 20px 15px;
+    padding: 10px 15px; /* Narrower */
     text-align: center;
   }
 
   .logo-text {
-    justify-content: center;   /* center horizontally */
-    align-items: center;      /* make sure it’s horizontal */
+    justify-content: center;
+    align-items: center;
   }
 
-.logo-circle {
-  background-color: #ffcc00;
-  color: #000000;
-  border-radius: 20%;           /* Perfect circle */
-  width: 58px;
-  height: 58px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;             /* '1400' is invalid, max is 900 */
-  font-size: 1.5rem;
-}
-
-  
-
+  .logo-circle {
+    width: 58px;
+    height: 58px;
+    font-size: 1.5rem;
+    border-radius: 20%;
+  }
 
   .navbar ul {
-    flex-direction: row; /* keep links horizontal */
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
@@ -286,10 +277,27 @@ section p {
   }
 
   .navbar div:last-child {
-    margin-top: 10px;
+    display: none; /* hide original button block in navbar */
+  }
+
+  .cta-wrapper {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta-wrapper a {
+    margin: 5px 0;
+  }
+
+  .cta-button,
+  .cta-button-start {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    max-width: 280px;
+  }
+
+  .click-label {
+    margin-top: 8px;
+    text-align: center;
   }
 }
 
