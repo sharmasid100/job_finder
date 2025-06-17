@@ -250,56 +250,66 @@ section p {
   .navbar {
     flex-direction: column;
     align-items: center;
-    padding: 10px 15px; /* Narrower */
+    padding: 12px 20px;
     text-align: center;
   }
 
-  .logo-text {
+  .logo {
     justify-content: center;
-    align-items: center;
   }
 
   .logo-circle {
-    width: 58px;
-    height: 58px;
-    font-size: 1.5rem;
-    border-radius: 20%;
+    width: 48px;
+    height: 48px;
+    font-size: 1.4rem;
+    border-radius: 50%;
+  }
+
+  .logo-text {
+    opacity: 1 !important;
+    transform: none !important;
+    font-size: 1.3rem;
+    color: #ffcc00;
   }
 
   .navbar ul {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
-    margin: 10px 0 0;
+    gap: 10px;
+    margin-top: 10px;
     padding: 0;
     width: 100%;
   }
 
   .navbar div:last-child {
-    display: none; /* hide original button block in navbar */
+    display: none; /* hides right-side button in navbar */
   }
 
   .cta-wrapper {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     gap: 12px;
-  }
-
-  .cta-wrapper a {
-    margin: 5px 0;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
   }
 
   .cta-button,
   .cta-button-start {
-    width: 100%;
-    max-width: 280px;
+    width: auto;
+    padding: 10px 20px;
+    font-size: 0.95rem;
   }
 
   .click-label {
-    margin-top: 8px;
+    margin-top: 6px;
+    font-size: 13px;
     text-align: center;
+    transform: rotate(-5deg);
+    animation: pulse 1.5s infinite;
   }
 }
+
 
 
   </style>
