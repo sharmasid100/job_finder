@@ -45,6 +45,7 @@ body {
   padding: 20px 30px;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  transition: top 0.3s ease;
 }
 
 .logo {
@@ -428,6 +429,26 @@ section p {
       
     });
   </script>
+
+  <script>
+  let lastScrollTop = 0;
+  const navbar = document.querySelector('.navbar');
+
+  window.addEventListener("scroll", function () {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      // Scrolling down
+      navbar.classList.add("hidden");
+    } else {
+      // Scrolling up
+      navbar.classList.remove("hidden");
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  }, false);
+</script>
+
 
 </body>
 
