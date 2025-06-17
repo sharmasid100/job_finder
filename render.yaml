@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: job-role-predictor
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn server.server:app"
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 10000
