@@ -407,45 +407,43 @@ section p {
     © 2025 Jinger. All rights reserved.
   </footer>
 
-  <script>
-    window.addEventListener("load", () => {
-      const navText = document.querySelector(".logo-text");
+ <script>
+  window.addEventListener("load", () => {
+    const navText = document.querySelector(".logo-text");
 
-      // Animate logo-text appearing from "J"
-      gsap.to(navText, {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        delay: 0.3,
-        ease: "power3.out"
-      });
-
-      // Animate hero text fade-up
-      gsap.to(".main-text h3", { opacity: 1, y: 0, duration: 1.5, delay: 0.2, ease: "power3.out" });
-      gsap.to(".main-text h1", { opacity: 1, y: 0, duration: 1.5, delay: 0.2, ease: "power3.out" });
-      gsap.to(".main-text p", { opacity: 1, y: 0, duration: 1.5, delay: 0.2, ease: "power3.out" });
-      gsap.to(".main-text a", { opacity: 1, y: 0, duration: 1.5, delay: 0.2, ease: "power3.out" });
-      gsap.to(".cta-wrapper", { opacity: 1, y: 0, duration: 1.5, delay: 0.2, ease: "power3.out" });
-      
+    // Animate logo-text appearing from "J"
+    gsap.to(navText, {
+      opacity: 1,
+      x: 0,
+      duration: 1,
+      delay: 0.3,
+      ease: "power3.out"
     });
 
-      let lastScrollTop = 0;
+    // Animate hero text fade-up
+    gsap.to(".main-text h3", { opacity: 1, y: 0, duration: 1.5, delay: 0.2, ease: "power3.out" });
+    gsap.to(".main-text h1", { opacity: 1, y: 0, duration: 1.5, delay: 0.3, ease: "power3.out" });
+    gsap.to(".main-text p", { opacity: 1, y: 0, duration: 1.5, delay: 0.4, ease: "power3.out" });
+    gsap.to(".cta-wrapper", { opacity: 1, y: 0, duration: 1.5, delay: 0.5, ease: "power3.out" });
+  });
+
+  // Scroll-hide navbar behavior
+  let lastScrollTop = 0;
   const navbar = document.querySelector('.navbar');
 
   window.addEventListener("scroll", function () {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (currentScroll > lastScrollTop) {
-      // Scrolling down
+    if (currentScroll > lastScrollTop && currentScroll > 50) {
       navbar.classList.add("hidden");
     } else {
-      // Scrolling up
       navbar.classList.remove("hidden");
     }
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-  }, false);
-  </script>
+  });
+</script>
+
 
 
 
